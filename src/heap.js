@@ -1,7 +1,7 @@
 (function (win) {
-  var JSHeap = win.JSHeap = ( win.JSHeap || {} );
+  var JSContainers = win.JSContainers = ( win.JSContainers || {} );
 
-  var Heap = JSHeap.Heap = function (dataArr) {
+  var Heap = JSContainers._Heap = function (dataArr) {
     this.data = dataArr;
   };
 

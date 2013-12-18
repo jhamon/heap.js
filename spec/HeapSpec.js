@@ -2,7 +2,7 @@ describe("A Heap", function() {
   var heap;
 
   beforeEach(function () {
-    heap = new JSHeap.Heap([1,2,3,4,5]);
+    heap = new JSContainers._Heap([1,2,3,4,5]);
   });
 
   it("has a data field holding the array", function() {
@@ -12,7 +12,7 @@ describe("A Heap", function() {
   describe("it has private functions for computing indices", function () {
 
     beforeEach(function () {
-      heap = new JSHeap.Heap([1,2,3,4,5]);
+      heap = new JSContainers._Heap([1,2,3,4,5]);
     });
 
     it("has a _left function", function () {

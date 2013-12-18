@@ -2,7 +2,7 @@ describe("MaxHeap", function () {
   var maxHeap;
 
   beforeEach(function () {
-    maxHeap = new JSHeap.MaxHeap([1,2,3,4,5,6,7]);
+    maxHeap = new JSContainers.MaxHeap([1,2,3,4,5,6,7]);
   });
 
   it("has a data attribute", function () {
@@ -10,7 +10,7 @@ describe("MaxHeap", function () {
   });
 
   it("cannot be initialized empty", function () {
-    expect(function () { return new JSHeap.MaxHeap([])}).toThrow();
+    expect(function () { return new JSContainers.MaxHeap([])}).toThrow();
   })
 
   describe("#isValid", function () {
@@ -103,7 +103,7 @@ describe("MaxHeap", function () {
     });
 
     it("works on an array containing negative numbers", function () {
-      maxHeap = new JSHeap.MaxHeap([-5,-1,-5,4,3,2,100,11]);
+      maxHeap = new JSContainers.MaxHeap([-5,-1,-5,4,3,2,100,11]);
       expect(maxHeap.isValid()).toBe(true);
     })
   });

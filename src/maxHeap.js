@@ -1,7 +1,7 @@
 (function (win) {
-  var JSHeap = win.JSHeap = (win.JSHeap || {});
+  var JSContainers = win.JSContainers = (win.JSContainers || {});
 
-  var MaxHeap = JSHeap.MaxHeap = function(dataArr) {
+  var MaxHeap = JSContainers.MaxHeap = function(dataArr) {
     if (!(dataArr instanceof Array)) {
       throw "MaxHeap cannot be initialized without array argument";
     }
@@ -9,8 +9,8 @@
     this.buildMaxHeap();      
   }
 
-  MaxHeap.prototype = new JSHeap.Heap();
-  MaxHeap.prototype.constructor = JSHeap.MaxHeap;
+  MaxHeap.prototype = new JSContainers._Heap();
+  MaxHeap.prototype.constructor = JSContainers.MaxHeap;
 
   MaxHeap.prototype._checkChildIsSmaller = function (item, index, childIndexFunc) {
     var childIndex = childIndexFunc(index);

@@ -1,7 +1,7 @@
 (function (win) {
-  var JSHeap = win.JSHeap = (win.JSHeap || {});
+  var JSContainers = win.JSContainers = (win.JSContainers || {});
 
-  var MinHeap = JSHeap.MinHeap = function (dataArr) {
+  var MinHeap = JSContainers.MinHeap = function (dataArr) {
     if (!(dataArr instanceof Array)) {
       throw "MinHeap cannot be initialized without array argument";
     }
@@ -9,7 +9,7 @@
     this.buildMinHeap();
   }
 
-  MinHeap.prototype = new JSHeap.Heap();
+  MinHeap.prototype = new JSContainers._Heap();
 
   MinHeap.prototype.constructor = MinHeap;
 

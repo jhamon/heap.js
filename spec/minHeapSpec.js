@@ -2,7 +2,7 @@ describe("MinHeap", function () {
   var minHeap;
 
   beforeEach(function () {
-    minHeap = new JSHeap.MinHeap([1,2,3,4,5,6]);
+    minHeap = new JSContainers.MinHeap([1,2,3,4,5,6]);
   });
 
   it("inherits #_left from Heap", function () {
@@ -18,7 +18,7 @@ describe("MinHeap", function () {
   });
 
   it("cannot be initialized without an array argument", function () {
-    expect(function () { new JSHeap.MinHeap() }).toThrow();
+    expect(function () { new JSContainers.MinHeap() }).toThrow();
   })
 
   describe("#isValid", function () {
